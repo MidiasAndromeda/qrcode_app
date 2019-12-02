@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+
+# generated build in android app
+android/app/build/*
+
+# generated .gradle output
+android/.gradle
+
+#generated intellisense
+.idea/*
