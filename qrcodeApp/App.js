@@ -1,17 +1,34 @@
 import * as WebBrowser from 'expo-web-browser';
 import React, { Component } from 'react';
-import { Button, StyleSheet, View } from 'react-native';
+import { Button, Image, StyleSheet, Text, View } from 'react-native';
 
 export default class App extends Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Image style={{width: 200, height:200, marginBottom:50}} source={require("./src/assets/images/logo_transparent.png")} />
+        <Text style={
+          {
+            fontSize: 30,
+            paddingBottom: 20
+          }
+        }>
+          Bienvenue sur GoStyle </Text>
         <Button
-          title="Open a web browser"
+          title="Scannez votre QrCode"
           onPress={() => {
-            WebBrowser.openBrowserAsync('https://expo.io');
+            WebBrowser.openBrowserAsync('https://www.twitter.com');
           }}
         />
+        <Text style={
+          {
+            fontSize: 12,
+            paddingTop: 20,
+            textAlign: 'center'
+          }
+        } >
+          En scannant le QrCode, vous pourrez bénéficier du code promo corresponsant au magasin!
+            </Text>
       </View>
     );
   }
